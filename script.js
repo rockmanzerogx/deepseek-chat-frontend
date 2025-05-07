@@ -1,4 +1,4 @@
-const BACKEND_URL = "https://deepseek-chat-backend.onrender.com/"; // Usa tu URL de Render
+const BACKEND_URL = "https://deepseek-chat-backend.onrender.com/chat"; // Usa tu URL de Render
 
 async function sendMessage() {
     const userInput = document.getElementById("user-input").value;
