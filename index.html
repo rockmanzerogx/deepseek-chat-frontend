@@ -6,9 +6,13 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <h1>Chat con DeepSeek</h1>
     <div id="chat-box"></div>
-    <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
+    <input type="file" id="file-input" accept=".pdf,.txt">
+    <input type="text" id="user-input" placeholder="Escribe tu pregunta...">
     <button onclick="sendMessage()">Enviar</button>
+    <div id="loading-indicator">Enviando...</div>
+
     <script src="script.js"></script>
 </body>
 </html>
