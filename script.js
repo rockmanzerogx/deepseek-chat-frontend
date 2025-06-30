@@ -28,12 +28,12 @@ async function sendMessage() {
 
         const response = await fetch(BACKEND_URL, {
             method: "POST",
-            body: formData,
-            mode: "cors"
+            body: formData
         });
 
         if (!response.ok) {
-            throw new Error(`Error ${response.status}: ${response.statusText}`);
+            const errorData = await response.json().catch(() => ({}));
+            throw new Error(errorData.error || `Error ${response.status}`);
         }
 
         const data = await response.json();
